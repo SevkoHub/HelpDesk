@@ -9,7 +9,22 @@ Bu proje, kurum içi destek taleplerinin oluşturulması, listelenmesi ve filtre
 
 1. Projeyi bir Java IDE'sinde (IntelliJ, Eclipse vb.) açın.
 2. Gerekli bağımlılıkları yüklemek için Maven/Gradle yapısını güncelleyin.
-3. `application.properties` dosyasındaki veritabanı yapılandırmalarını kontrol edin. Database url , username ve password ünüzü girin. 
+3. `application.properties` dosyasındaki veritabanı yapılandırmalarını kontrol edin. Database url , username ve password ünüzü girin.
+
+# src/main/resources/application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/helpdeskdb
+spring.datasource.username=your-username
+spring.datasource.password=your-password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.data.rest.base-path=/api
+
+bu şekilde ekleyin. 
+
+> 🛡️ Güvenlik Notu: Gerçek veritabanı kullanıcı adı ve şifre bilgileri `.gitignore` ile gizlenmiştir. Projeyi çalıştırmadan önce `src/main/resources/application.properties` dosyasını kendin oluşturmalı ve veritabanı bilgilerini girmelisin.
+
+  
 4. Projeyi çalıştırın (`Spring Boot Application`).
 
 ### Frontend
