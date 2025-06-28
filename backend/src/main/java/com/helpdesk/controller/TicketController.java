@@ -38,7 +38,7 @@ public class TicketController {
         return ticketService.updateTicket(id, ticket);
     }
 
-    @DeleteMapping("/{id}") // remove
+    @DeleteMapping("/{id}") // remove added but button doest not exist for now
     public void deleteTicket(@PathVariable Long id) {
         ticketService.deleteTicket(id);
     }

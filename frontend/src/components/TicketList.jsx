@@ -140,7 +140,7 @@ const TicketList = ({reloadFlag}) => {
 
   return (
     <div>
-      <h2>Destek Talepleri</h2>
+      <h2>Destek Talepleri Filtresi</h2>
 
       {/* Filtre Formu */}
       <form onSubmit={handleFilterSubmit} style={{ marginBottom: '20px' }}>
